@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Example</title>
+</head>
+<body>
+    <h1>Check the Console for Results</h1>
+
+    <script>
+
+        function printresultOne(num) {
+            console.log(`The result is: ${num}! from one`);
+        }
+
+        function printresultTwo(num) {
+            console.log(`The result is: ${num}! from two`);
+        }
+    /*function mycalc(num1,num2){
+    let result=num1 +num2;
+
+    return result;
+    }
+    let mysum  = mycalc(4,8);
+    printresult(mysum);*/
+
+
+    /*function mycalc(num1,num2){
+    let result=num1 +num2;
+    printresult(result);
+    }
+    mycalc(2,6)*/
+
+
+        // This function calculates the sum and calls the provided callback function
+        function mycalc(num1, num2, callback) {
+            let result = num1 + num2;
+            callback(result);
+        }
+
+        // Call the function and pass printresultTwo as a callback
+        mycalc(3, 5, printresultTwo);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
