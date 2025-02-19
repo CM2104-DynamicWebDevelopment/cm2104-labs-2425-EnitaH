@@ -39,3 +39,4 @@ app.post('/postform', function(req, res){
     });
 
     app.use(express.urlencoded({extended:true}))
+
