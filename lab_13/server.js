@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 
 //code to define the public
-app.use(express.static(‘public'))
+app.use(express.static('public'))
 
 var db;
 
@@ -30,7 +30,7 @@ app.get('/all', function(req, res) {
     if (err) throw err;
 
     var output = "<h1>All the quotes</h1>";
-    
+
     for (var i = 0; i < result.length; i++) {
     output += "<div>"
     output += "<h3>" + result[i].name + "</h3>"
