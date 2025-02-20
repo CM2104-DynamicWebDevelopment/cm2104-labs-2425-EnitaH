@@ -60,7 +60,7 @@ app.post('/search', function(req, res) {
     if (err) throw err;
 
     var output = "<h1>All the quotes</h1>";
-    
+
     for (var i = 0; i < result.length; i++) {
     output += "<div>"
     output += "<h3>" + result[i].name + "</h3>"
@@ -71,3 +71,10 @@ app.post('/search', function(req, res) {
     });
 
 });
+//----------------
+app.post('/delete', function(req, res) {
+    db.collection('quotes').deleteOne(req.body, function(err, result) {
+    if (err) throw err;
+    res.redirect('/');
+    });
+    });
