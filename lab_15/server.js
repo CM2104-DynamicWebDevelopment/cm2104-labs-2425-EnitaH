@@ -109,6 +109,20 @@ app.get('/logout', function(req, res) {
   req.session.destroy();
   res.redirect('/');
 });
+//adding a section to the top of the index page to welcome the currently  
+add.get('/', function(req,res){
+  //check we loggd in
+  if(!req.session.loggedin){res.redirect('/login');return;}
+  
+  db.collection('people').find().toArray(function(err,result){
+    if (err) throw err;
+    res.render('pages/users',{
+      user:result,
+    loggedInUser : req.session.user
+  })
+  });
+  
+});
 
 
 
