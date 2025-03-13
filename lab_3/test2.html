@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Example</title>
+</head>
+<body>
+    <h1>Check the Console for Results</h1>
+
+    <script>
+
+       setTimeout(myfunction,3000);
+        function myfunction(){
+            console.log("hello")
+        }
+        
+       /*
+       setTimeout(() => {
+            console.log("hi")
+       }, 3000);
+        */
+
+        let counter=0;
+       let myinterval = setInterval(() => {
+
+        counter+=1;
+        console.log(counter);
+        
+       }, 1000);
+
+       let mysettime= setTimeout(() => {
+        (clearInterval(myinterval));
+
+       }, 5000);
+
+       clearTimeout(mysettime);
+
+
+       
+
+</script>
+</body>
+</html>
